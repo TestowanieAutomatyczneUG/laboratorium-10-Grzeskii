@@ -32,3 +32,9 @@ class TestNotesService(unittest.TestCase):
         self.temp.clear()
         self.temp.notes_storage.notes = []
         self.assertEqual(self.temp.notes_storage.notes, [])
+
+    def tearDown(self):
+        self.temp = None
+
+if __name__ == "__main__":
+    unittest.main()
